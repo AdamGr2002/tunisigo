@@ -39,7 +39,7 @@ export default function DiscoverScreen() {
       <Text style={styles.sectionTitle}>Featured Places</Text>
       
       {FEATURED_PLACES.map((place) => (
-        <Link key={place.id} href={`/destination/${place.id}`} asChild>
+        <Link key={place.id} href={{pathname:`/(tabs)/destinations`, params:{id: place.id}}}>
           <Pressable style={styles.card}>
             <Image source={{ uri: place.image }} style={styles.cardImage} />
             <View style={styles.cardContent}>
